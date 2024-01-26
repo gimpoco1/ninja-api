@@ -18,12 +18,12 @@ export class ItemsController {
   constructor(private readonly itemsService: ItemsService) {}
   // GET /items
   @Get()
-  async findAll(): Promise<Item[]> {
+  findAll(): Promise<Item[]> {
     return this.itemsService.findAll();
   }
   // GET /items/:id
   @Get(':id')
-  async findOne(@Param('id') id): Promise<Item> {
+  findOne(@Param('id') id): Promise<Item> {
     return this.itemsService.findOne(id);
   }
   @Post()
@@ -40,5 +40,4 @@ export class ItemsController {
   delete(@Param('id') id): Promise<Item> {
     return this.itemsService.delete(id);
   }
-
 }
