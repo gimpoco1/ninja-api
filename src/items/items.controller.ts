@@ -6,8 +6,6 @@ import {
   Param,
   Post,
   Put,
-  Req,
-  Res,
 } from '@nestjs/common';
 import { CreateItemDto } from './dto/create-items.dto';
 import { ItemsService } from './items.service';
